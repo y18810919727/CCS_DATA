@@ -309,6 +309,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -370,6 +377,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -431,6 +445,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -492,6 +513,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -553,6 +581,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -614,6 +649,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -675,6 +717,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -736,6 +785,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -797,6 +853,13 @@
 							<option>RONGBO</option>
 							<option>KML</option>
 							<option>COMILU</option>
+                            <option>NST</option>
+                            <option>HRC</option>
+                            <option>GS</option>
+                            <option>Luna</option>
+                            <option>KCM</option>
+                            <option>Comliu</option>
+                            <option>MOPANI</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
