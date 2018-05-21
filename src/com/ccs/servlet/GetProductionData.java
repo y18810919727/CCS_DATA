@@ -109,6 +109,9 @@ public class GetProductionData extends HttpServlet {
 				jobj.put("h10used", production.getH10used());
 				jobj.put("h11used", production.getH11used());
 				jobj.put("h12used", production.getH12used());
+				jobj.put("h13used", production.getH13used());
+				jobj.put("h14used", production.getH14used());
+				jobj.put("h15used", production.getH15used());
 				jobj.put("grade", production.getGrade());
 				jary.add(jobj);
 			}

@@ -210,6 +210,9 @@ public class CreateNewForm extends HttpServlet {
 		String dosage10 = change_DecimalFormat(request.getParameter("dosage10"));
 		String dosage11 = change_DecimalFormat(request.getParameter("dosage11"));
 		String dosage12 = change_DecimalFormat(request.getParameter("dosage12"));
+		String dosage13 = change_DecimalFormat(request.getParameter("dosage13"));
+		String dosage14 = change_DecimalFormat(request.getParameter("dosage14"));
+		String dosage15 = change_DecimalFormat(request.getParameter("dosage15"));
 		// 防崩溃(注：getParameter得到的空串为""而不是null)
 		summary.setDosage1(dosage1);
 		summary.setDosage2(dosage2);
@@ -223,6 +226,9 @@ public class CreateNewForm extends HttpServlet {
 		summary.setDosage10(dosage10);
 		summary.setDosage11(dosage11);
 		summary.setDosage12(dosage12);
+		summary.setDosage13(dosage13);
+		summary.setDosage14(dosage14);
+		summary.setDosage15(dosage15);
 		String oxyconc = change_DecimalFormat(request.getParameter("oxyconc"));
 		String digifax = change_DecimalFormat(request.getParameter("digifax"));
 		String fuelratio = change_DecimalFormat(request
@@ -314,6 +320,9 @@ public class CreateNewForm extends HttpServlet {
 		p.setH10used("0.00");
 		p.setH11used("0.00");
 		p.setH12used("0.00");
+		p.setH13used("0.00");
+		p.setH14used("0.00");
+		p.setH15used("0.00");
 		p.setCreatedate("0");
 
 		// 从前台获取表ingredient中个字段的数据
@@ -481,6 +490,60 @@ public class CreateNewForm extends HttpServlet {
 				.getParameter("NO12_MgO")));
 		ingredient.setNO12_Al2O3(change_DecimalFormat(request
 				.getParameter("NO12_Al2O3")));
+		// ------分割线------
+		ingredient.setNO13_name(request.getParameter("NO13_name"));
+		ingredient.setNO13_Cu(change_DecimalFormat(request
+				.getParameter("NO13_Cu")));
+		ingredient.setNO13_Fe(change_DecimalFormat(request
+				.getParameter("NO13_Fe")));
+		ingredient.setNO13_S(change_DecimalFormat(request
+				.getParameter("NO13_S")));
+		ingredient.setNO13_Co(change_DecimalFormat(request
+				.getParameter("NO13_Co")));
+		ingredient.setNO13_SiO2(change_DecimalFormat(request
+				.getParameter("NO13_SiO2")));
+		ingredient.setNO13_CaO(change_DecimalFormat(request
+				.getParameter("NO13_CaO")));
+		ingredient.setNO13_MgO(change_DecimalFormat(request
+				.getParameter("NO13_MgO")));
+		ingredient.setNO13_Al2O3(change_DecimalFormat(request
+				.getParameter("NO13_Al2O3")));
+		// ------分割线------
+		ingredient.setNO14_name(request.getParameter("NO14_name"));
+		ingredient.setNO14_Cu(change_DecimalFormat(request
+				.getParameter("NO14_Cu")));
+		ingredient.setNO14_Fe(change_DecimalFormat(request
+				.getParameter("NO14_Fe")));
+		ingredient.setNO14_S(change_DecimalFormat(request
+				.getParameter("NO14_S")));
+		ingredient.setNO14_Co(change_DecimalFormat(request
+				.getParameter("NO14_Co")));
+		ingredient.setNO14_SiO2(change_DecimalFormat(request
+				.getParameter("NO14_SiO2")));
+		ingredient.setNO14_CaO(change_DecimalFormat(request
+				.getParameter("NO14_CaO")));
+		ingredient.setNO14_MgO(change_DecimalFormat(request
+				.getParameter("NO14_MgO")));
+		ingredient.setNO14_Al2O3(change_DecimalFormat(request
+				.getParameter("NO14_Al2O3")));
+		// ------分割线------
+		ingredient.setNO15_name(request.getParameter("NO15_name"));
+		ingredient.setNO15_Cu(change_DecimalFormat(request
+				.getParameter("NO15_Cu")));
+		ingredient.setNO15_Fe(change_DecimalFormat(request
+				.getParameter("NO15_Fe")));
+		ingredient.setNO15_S(change_DecimalFormat(request
+				.getParameter("NO15_S")));
+		ingredient.setNO15_Co(change_DecimalFormat(request
+				.getParameter("NO15_Co")));
+		ingredient.setNO15_SiO2(change_DecimalFormat(request
+				.getParameter("NO15_SiO2")));
+		ingredient.setNO15_CaO(change_DecimalFormat(request
+				.getParameter("NO15_CaO")));
+		ingredient.setNO15_MgO(change_DecimalFormat(request
+				.getParameter("NO15_MgO")));
+		ingredient.setNO15_Al2O3(change_DecimalFormat(request
+				.getParameter("NO15_Al2O3")));
 		// ------分割线------
 		ingredient.setCon_Cu(change_DecimalFormat(request
 				.getParameter("Con_Cu")));

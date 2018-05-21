@@ -88,7 +88,7 @@ public class LoginServlet extends HttpServlet {
 		String result = null;
 		// 定义字符串username和password，以接受用户提交的信息
 		String username = new String(request.getParameter("username").
-				getBytes("ISO-8859-1"), "utf-8");
+				getBytes("utf-8"), "utf-8");
 		String password = request.getParameter("password");
 		// System.out.println(username);
 		// System.out.println(password);

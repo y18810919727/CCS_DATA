@@ -45,6 +45,7 @@ public class MineralDAO {
 			m.setAl2O3(rs.getDouble(12));
 			list.add(m);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -70,6 +71,7 @@ public class MineralDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -98,6 +100,7 @@ public class MineralDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -121,6 +124,7 @@ public class MineralDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else

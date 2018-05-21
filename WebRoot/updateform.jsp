@@ -92,6 +92,21 @@
 				readonly="readonly"> 配料单号：<input style="width:150px"
 				name="number" id="numid" value="${requestScope.number }"
 				readonly="readonly">
+			是否使用：
+			<%
+
+				Ingredient ingredient = (Ingredient) request
+						.getAttribute("ingredient");
+			%>
+
+			<select style="height: 25px" id="isUsedID" name="isUsedName">
+				<option value="1">是</option>
+				<option value="2">否</option>
+			</select>
+			<script type="text/javascript">
+				$("#isUsedID").val("<%=ingredient.isIs_used()==true?"1":"2"%>");
+			</script>
+
 		</div>
 		<div style="margin:0 auto; width:1100px">
 			<table border="1" class="table1" id="stock">
@@ -274,8 +289,7 @@
 					<td>用量dosage</td>
 				</tr>
 				<%
-					Ingredient ingredient = (Ingredient) request
-								.getAttribute("ingredient");
+					 //ingredient = (Ingredient) request.getAttribute("ingredient");
 						Summary summary = (Summary) request.getAttribute("summary");
 						String NO1name = ingredient.getNO1_name();
 						String NO2name = ingredient.getNO2_name();
@@ -286,6 +300,9 @@
 						String NO10name = ingredient.getNO10_name();
 						String NO11name = ingredient.getNO11_name();
 						String NO12name = ingredient.getNO12_name();
+						String NO13name = ingredient.getNO13_name();
+						String NO14name = ingredient.getNO14_name();
+						String NO15name = ingredient.getNO15_name();
 				%>
 				<tr>
 					<td>1</td>
@@ -305,17 +322,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -373,17 +390,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -441,17 +458,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -509,17 +526,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -577,17 +594,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -645,17 +662,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -713,17 +730,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -781,17 +798,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -849,17 +866,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
-                            <option>GS</option>
-                            <option>Luna</option>
+                            <option>GREATSTONE</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -898,6 +915,210 @@
 					</td>
 					<td><input type="text" name="dosage12" id="dosage12"
 						style="width:80px" value="<%=summary.getDosage12()%>" /></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td><input id="NO13_val" type="hidden" style="width:90px"
+							   name="NO13_name" value="<%=NO13name%>" />
+						<select id="NO13_name" onchange="AutoZero(13)">
+							<option>LUANSHYA</option>
+							<option>KANSANSHI</option>
+							<option>LUMWANA</option>
+							<option>CHIBULUMA</option>
+							<option>ENRC矿</option>
+							<option>TF矿</option>
+							<option>COLD冷料</option>
+							<option>REVERTS</option>
+							<option>LUBAMBE</option>
+							<option>NFCA</option>
+							<option>BOLO</option>
+							<option>CCS矿</option>
+							<option>SCM</option>
+							<option>RONGBO</option>
+							<option>KML</option>
+							<option>NST</option>
+							<option>HRC</option>
+							<option>GREATSTONE</option>
+							<option>LUNA</option>
+							<option>KCM</option>
+							<option>COMILU</option>
+							<option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
+							<option>(无矿)</option>
+						</select>
+					</td>
+					<td><input type="text" name="NO13_Cu" id="NO13_Cu"
+							   style="width:80px" onblur="checkNum('NO13_Cu')"
+							   value="<%=ingredient.getNO13_Cu()%>" />
+					</td>
+					<td><input type="text" name="NO13_Fe" id="NO13_Fe"
+							   style="width:80px" onblur="checkNum('NO13_Fe')"
+							   value="<%=ingredient.getNO13_Fe()%>" />
+					</td>
+					<td><input type="text" name="NO13_S" id="NO13_S"
+							   style="width:80px" onblur="checkNum('NO13_S')"
+							   value="<%=ingredient.getNO13_S()%>" />
+					</td>
+
+					<td><input type="text" name="NO13_SiO2" id="NO13_SiO2"
+							   style="width:80px" onblur="checkNum('NO13_SiO2')"
+							   value="<%=ingredient.getNO13_SiO2()%>" />
+					</td>
+					<td><input type="text" name="NO13_CaO" id="NO13_CaO"
+							   style="width:80px" onblur="checkNum('NO13_CaO')"
+							   value="<%=ingredient.getNO13_CaO()%>" />
+					</td>
+					<td><input type="text" name="NO13_MgO" id="NO13_MgO"
+							   style="width:80px" onblur="checkNum('NO13_MgO')"
+							   value="<%=ingredient.getNO13_MgO()%>" />
+					</td>
+					<td><input type="text" name="NO13_Al2O3" id="NO13_Al2O3"
+							   style="width:80px" onblur="checkNum('NO13_Al2O3')"
+							   value="<%=ingredient.getNO13_Al2O3()%>" />
+					</td>
+					<td><input type="text" name="NO13_Co" id="NO13_Co"
+							   style="width:80px" onblur="checkNum('NO13_Co')"
+							   value="<%=ingredient.getNO13_Co()%>" />
+					</td>
+					<td><input type="text" name="dosage13" id="dosage13"
+							   style="width:80px" value="<%=summary.getDosage13()%>" /></td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td><input id="NO14_val" type="hidden" style="width:90px"
+							   name="NO14_name" value="<%=NO14name%>" />
+						<select id="NO14_name" onchange="AutoZero(14)">
+							<option>LUANSHYA</option>
+							<option>KANSANSHI</option>
+							<option>LUMWANA</option>
+							<option>CHIBULUMA</option>
+							<option>ENRC矿</option>
+							<option>TF矿</option>
+							<option>COLD冷料</option>
+							<option>REVERTS</option>
+							<option>LUBAMBE</option>
+							<option>NFCA</option>
+							<option>BOLO</option>
+							<option>CCS矿</option>
+							<option>SCM</option>
+							<option>RONGBO</option>
+							<option>KML</option>
+							<option>NST</option>
+							<option>HRC</option>
+							<option>GREATSTONE</option>
+							<option>LUNA</option>
+							<option>KCM</option>
+							<option>COMILU</option>
+							<option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
+							<option>(无矿)</option>
+						</select>
+					</td>
+					<td><input type="text" name="NO14_Cu" id="NO14_Cu"
+							   style="width:80px" onblur="checkNum('NO14_Cu')"
+							   value="<%=ingredient.getNO14_Cu()%>" />
+					</td>
+					<td><input type="text" name="NO14_Fe" id="NO14_Fe"
+							   style="width:80px" onblur="checkNum('NO14_Fe')"
+							   value="<%=ingredient.getNO14_Fe()%>" />
+					</td>
+					<td><input type="text" name="NO14_S" id="NO14_S"
+							   style="width:80px" onblur="checkNum('NO14_S')"
+							   value="<%=ingredient.getNO14_S()%>" />
+					</td>
+
+					<td><input type="text" name="NO14_SiO2" id="NO14_SiO2"
+							   style="width:80px" onblur="checkNum('NO14_SiO2')"
+							   value="<%=ingredient.getNO14_SiO2()%>" />
+					</td>
+					<td><input type="text" name="NO14_CaO" id="NO14_CaO"
+							   style="width:80px" onblur="checkNum('NO14_CaO')"
+							   value="<%=ingredient.getNO14_CaO()%>" />
+					</td>
+					<td><input type="text" name="NO14_MgO" id="NO14_MgO"
+							   style="width:80px" onblur="checkNum('NO14_MgO')"
+							   value="<%=ingredient.getNO14_MgO()%>" />
+					</td>
+					<td><input type="text" name="NO14_Al2O3" id="NO14_Al2O3"
+							   style="width:80px" onblur="checkNum('NO14_Al2O3')"
+							   value="<%=ingredient.getNO14_Al2O3()%>" />
+					</td>
+					<td><input type="text" name="NO14_Co" id="NO14_Co"
+							   style="width:80px" onblur="checkNum('NO14_Co')"
+							   value="<%=ingredient.getNO14_Co()%>" />
+					</td>
+					<td><input type="text" name="dosage14" id="dosage14"
+							   style="width:80px" value="<%=summary.getDosage14()%>" /></td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td><input id="NO15_val" type="hidden" style="width:90px"
+							   name="NO15_name" value="<%=NO15name%>" />
+						<select id="NO15_name" onchange="AutoZero(15)">
+							<option>LUANSHYA</option>
+							<option>KANSANSHI</option>
+							<option>LUMWANA</option>
+							<option>CHIBULUMA</option>
+							<option>ENRC矿</option>
+							<option>TF矿</option>
+							<option>COLD冷料</option>
+							<option>REVERTS</option>
+							<option>LUBAMBE</option>
+							<option>NFCA</option>
+							<option>BOLO</option>
+							<option>CCS矿</option>
+							<option>SCM</option>
+							<option>RONGBO</option>
+							<option>KML</option>
+							<option>NST</option>
+							<option>HRC</option>
+							<option>GREATSTONE</option>
+							<option>LUNA</option>
+							<option>KCM</option>
+							<option>COMILU</option>
+							<option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
+							<option>(无矿)</option>
+						</select>
+					</td>
+					<td><input type="text" name="NO15_Cu" id="NO15_Cu"
+							   style="width:80px" onblur="checkNum('NO15_Cu')"
+							   value="<%=ingredient.getNO15_Cu()%>" />
+					</td>
+					<td><input type="text" name="NO15_Fe" id="NO15_Fe"
+							   style="width:80px" onblur="checkNum('NO15_Fe')"
+							   value="<%=ingredient.getNO15_Fe()%>" />
+					</td>
+					<td><input type="text" name="NO15_S" id="NO15_S"
+							   style="width:80px" onblur="checkNum('NO15_S')"
+							   value="<%=ingredient.getNO15_S()%>" />
+					</td>
+
+					<td><input type="text" name="NO15_SiO2" id="NO15_SiO2"
+							   style="width:80px" onblur="checkNum('NO15_SiO2')"
+							   value="<%=ingredient.getNO15_SiO2()%>" />
+					</td>
+					<td><input type="text" name="NO15_CaO" id="NO15_CaO"
+							   style="width:80px" onblur="checkNum('NO15_CaO')"
+							   value="<%=ingredient.getNO15_CaO()%>" />
+					</td>
+					<td><input type="text" name="NO15_MgO" id="NO15_MgO"
+							   style="width:80px" onblur="checkNum('NO15_MgO')"
+							   value="<%=ingredient.getNO15_MgO()%>" />
+					</td>
+					<td><input type="text" name="NO15_Al2O3" id="NO15_Al2O3"
+							   style="width:80px" onblur="checkNum('NO15_Al2O3')"
+							   value="<%=ingredient.getNO15_Al2O3()%>" />
+					</td>
+					<td><input type="text" name="NO15_Co" id="NO15_Co"
+							   style="width:80px" onblur="checkNum('NO15_Co')"
+							   value="<%=ingredient.getNO15_Co()%>" />
+					</td>
+					<td><input type="text" name="dosage15" id="dosage15"
+							   style="width:80px" value="<%=summary.getDosage15()%>" /></td>
 				</tr>
 				<tr>
 					<td>-</td>
@@ -949,6 +1170,10 @@
 				changeSelected("NO10_name", $("#NO10_val").val());
 				changeSelected("NO11_name", $("#NO11_val").val());
 				changeSelected("NO12_name", $("#NO12_val").val());
+                changeSelected("NO13_name", $("#NO13_val").val());
+                changeSelected("NO14_name", $("#NO14_val").val());
+                changeSelected("NO15_name", $("#NO15_val").val());
+				
 			</script>
 		</div>
 		<div style="margin:0 auto; width:1500px; padding-left:8%;">

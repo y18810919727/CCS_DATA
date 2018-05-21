@@ -98,6 +98,7 @@ public class CreateMainFormExcel {
 		sheet.addMergedRegion(new Region(2, (short) 8, 2, (short) 11));
 		sheet.getRow(2).getCell(8).setCellValue("单号 notification number：");
 		sheet.getRow(2).getCell(8).setCellStyle(style);
+		sheet.getRow(2).setHeight((short) 500);
 		sheet.addMergedRegion(new Region(2, (short) 12, 2, (short) 13));
 		sheet.getRow(2).getCell(12).setCellValue(number);
 		sheet.getRow(2).getCell(12).setCellStyle(style);
@@ -138,61 +139,73 @@ public class CreateMainFormExcel {
 		sheet.addMergedRegion(new Region(8, (short) 0, 8, (short) 1));
 		sheet.getRow(8).getCell(0).setCellValue("目前库存");
 		sheet.getRow(8).getCell(0).setCellStyle(style);
-		sheet.addMergedRegion(new Region(9, (short) 0, 10, (short) 13));
+		//sheet.addMergedRegion(new Region(9, (short) 0, 10, (short) 13));
 		// stock表
-		sheet.getRow(11).setHeight((short) 700);
-		sheet.getRow(11).getCell(0).setCellValue("仓号");
+		sheet.getRow(9).setHeight((short) 700);
+		sheet.getRow(9).getCell(0).setCellValue("仓号");
+		sheet.getRow(9).getCell(0).setCellStyle(style);
+		sheet.addMergedRegion(new Region(9, (short) 1, 9, (short) 3));
+		sheet.getRow(9).getCell(1).setCellValue("精矿名称 copper material name");
+		sheet.getRow(9).getCell(1).setCellStyle(style);
+		sheet.getRow(9).getCell(4).setCellValue("Cu");
+		sheet.getRow(9).getCell(4).setCellStyle(style);
+		sheet.getRow(9).getCell(5).setCellValue("Fe");
+		sheet.getRow(9).getCell(5).setCellStyle(style);
+		sheet.getRow(9).getCell(6).setCellValue("S");
+		sheet.getRow(9).getCell(6).setCellStyle(style);
+		sheet.getRow(9).getCell(7).setCellValue("SiO2");
+		sheet.getRow(9).getCell(7).setCellStyle(style);
+		sheet.getRow(9).getCell(8).setCellValue("CaO");
+		sheet.getRow(9).getCell(8).setCellStyle(style);
+		sheet.getRow(9).getCell(9).setCellValue("MgO");
+		sheet.getRow(9).getCell(9).setCellStyle(style);
+		sheet.getRow(9).getCell(10).setCellValue("Al2O3");
+		sheet.getRow(9).getCell(10).setCellStyle(style);
+		sheet.getRow(9).getCell(11).setCellValue("Co");
+		sheet.getRow(9).getCell(11).setCellStyle(style);
+		sheet.addMergedRegion(new Region(9, (short) 12, 9, (short) 13));
+		sheet.getRow(9).getCell(12).setCellValue("用量 dosage");
+		sheet.getRow(9).getCell(12).setCellStyle(style);
+		sheet.getRow(10).getCell(0).setCellValue("1");
+		sheet.getRow(10).getCell(0).setCellStyle(style);
+		sheet.addMergedRegion(new Region(10, (short) 1, 10, (short) 3));
+		sheet.getRow(11).getCell(0).setCellValue("2");
 		sheet.getRow(11).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(11, (short) 1, 11, (short) 3));
-		sheet.getRow(11).getCell(1).setCellValue("精矿名称 copper material name");
-		sheet.getRow(11).getCell(1).setCellStyle(style);
-		sheet.getRow(11).getCell(4).setCellValue("Cu");
-		sheet.getRow(11).getCell(4).setCellStyle(style);
-		sheet.getRow(11).getCell(5).setCellValue("Fe");
-		sheet.getRow(11).getCell(5).setCellStyle(style);
-		sheet.getRow(11).getCell(6).setCellValue("S");
-		sheet.getRow(11).getCell(6).setCellStyle(style);
-		sheet.getRow(11).getCell(7).setCellValue("SiO2");
-		sheet.getRow(11).getCell(7).setCellStyle(style);
-		sheet.getRow(11).getCell(8).setCellValue("CaO");
-		sheet.getRow(11).getCell(8).setCellStyle(style);
-		sheet.getRow(11).getCell(9).setCellValue("MgO");
-		sheet.getRow(11).getCell(9).setCellStyle(style);
-		sheet.getRow(11).getCell(10).setCellValue("Al2O3");
-		sheet.getRow(11).getCell(10).setCellStyle(style);
-		sheet.getRow(11).getCell(11).setCellValue("Co");
-		sheet.getRow(11).getCell(11).setCellStyle(style);
-		sheet.addMergedRegion(new Region(11, (short) 12, 11, (short) 13));
-		sheet.getRow(11).getCell(12).setCellValue("用量 dosage");
-		sheet.getRow(11).getCell(12).setCellStyle(style);
-		sheet.getRow(12).getCell(0).setCellValue("1");
+		sheet.getRow(12).getCell(0).setCellValue("3");
 		sheet.getRow(12).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(12, (short) 1, 12, (short) 3));
-		sheet.getRow(13).getCell(0).setCellValue("2");
+		sheet.getRow(13).getCell(0).setCellValue("4");
 		sheet.getRow(13).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(13, (short) 1, 13, (short) 3));
-		sheet.getRow(14).getCell(0).setCellValue("3");
+		sheet.getRow(14).getCell(0).setCellValue("8");
 		sheet.getRow(14).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(14, (short) 1, 14, (short) 3));
-		sheet.getRow(15).getCell(0).setCellValue("4");
+		sheet.getRow(15).getCell(0).setCellValue("9");
 		sheet.getRow(15).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(15, (short) 1, 15, (short) 3));
-		sheet.getRow(16).getCell(0).setCellValue("8");
+		sheet.getRow(16).getCell(0).setCellValue("10");
 		sheet.getRow(16).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(16, (short) 1, 16, (short) 3));
-		sheet.getRow(17).getCell(0).setCellValue("9");
+		sheet.getRow(17).getCell(0).setCellValue("11");
 		sheet.getRow(17).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(17, (short) 1, 17, (short) 3));
-		sheet.getRow(18).getCell(0).setCellValue("10");
+		sheet.getRow(18).getCell(0).setCellValue("12");
 		sheet.getRow(18).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(18, (short) 1, 18, (short) 3));
-		sheet.getRow(19).getCell(0).setCellValue("11");
+		sheet.getRow(19).getCell(0).setCellValue("13");
 		sheet.getRow(19).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(19, (short) 1, 19, (short) 3));
-		sheet.getRow(20).getCell(0).setCellValue("12");
+		sheet.getRow(20).getCell(0).setCellValue("14");
 		sheet.getRow(20).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(20, (short) 1, 20, (short) 3));
+		sheet.getRow(21).getCell(0).setCellValue("15");
+		sheet.getRow(21).getCell(0).setCellStyle(style);
+		sheet.addMergedRegion(new Region(21, (short) 1, 21, (short) 3));
+
 		// 合并“用量”的单元格
+		sheet.addMergedRegion(new Region(10, (short) 12, 10, (short) 13));
+		sheet.addMergedRegion(new Region(11, (short) 12, 11, (short) 13));
 		sheet.addMergedRegion(new Region(12, (short) 12, 12, (short) 13));
 		sheet.addMergedRegion(new Region(13, (short) 12, 13, (short) 13));
 		sheet.addMergedRegion(new Region(14, (short) 12, 14, (short) 13));
@@ -203,12 +216,11 @@ public class CreateMainFormExcel {
 		sheet.addMergedRegion(new Region(19, (short) 12, 19, (short) 13));
 		sheet.addMergedRegion(new Region(20, (short) 12, 20, (short) 13));
 		sheet.addMergedRegion(new Region(21, (short) 12, 21, (short) 13));
-		sheet.getRow(21).setHeight((short) 700);
-		sheet.addMergedRegion(new Region(21, (short) 0, 21, (short) 3));
-		sheet.getRow(21).getCell(0).setCellValue("模块输入成分 concentrate");
-		sheet.getRow(21).getCell(0).setCellStyle(style);
-		sheet.addMergedRegion(new Region(22, (short) 0, 22, (short) 13));
-		// summary表
+		sheet.addMergedRegion(new Region(22, (short) 12, 22, (short) 13));
+		sheet.getRow(22).setHeight((short) 700);
+		sheet.addMergedRegion(new Region(22, (short) 0, 22, (short) 3));
+		sheet.getRow(22).getCell(0).setCellValue("模块输入成分 concentrate");
+		sheet.getRow(22).getCell(0).setCellStyle(style);
 		sheet.addMergedRegion(new Region(23, (short) 0, 23, (short) 13));
 		sheet.getRow(23).getCell(0).setCellValue("控制参数 control parameter");
 		sheet.getRow(23).getCell(0).setCellStyle(style);
@@ -331,6 +343,7 @@ public class CreateMainFormExcel {
 				for (int j = 2; j <= 13; j++) {
 					// 依次获取声明的变量名
 					String fieldName = fields[k].getName();
+					System.out.println(i+" "+j+fieldName);
 					// 生成get方法名
 					String getMethodName = "get"
 							+ fieldName.substring(0, 1).toUpperCase()
@@ -377,7 +390,7 @@ public class CreateMainFormExcel {
 				// 从第4个声明的字段开始
 				short k = 3;
 				// 行遍历
-				for (int i = 12; i <= 21; i++) {
+				for (int i = 10; i <= 22; i++) {
 					// 列遍历
 					for (int j = 3; j <= 11; j++) {
 						String fieldName = fields[k].getName();
@@ -391,7 +404,7 @@ public class CreateMainFormExcel {
 						if (j == 3) {
 							// 设置精矿名称
 							// i为21时是模块输入成分，不需要设置名字
-							if (i == 21)
+							if (i == 22)
 								continue;
 							sheet.getRow(i).getCell(j - 2).setCellValue(value);
 							sheet.getRow(i).getCell(j - 2).setCellStyle(style);
@@ -403,8 +416,10 @@ public class CreateMainFormExcel {
 										.getCell(j)
 										.setCellValue(
 												String.format("%.2f", dvalue));
-								sheet.getRow(i).getCell(j).setCellStyle(style);
+								//sheet.getRow(i).getCell(j).setCellStyle(style);
 							}
+							else
+                                sheet.getRow(i).getCell(j).setCellValue(0.00);
 						}
 						// 如果没遍历完所有声明，就继续增加k
 						if (k < fields.length - 1)
@@ -413,9 +428,9 @@ public class CreateMainFormExcel {
 				}
 				// 单独设置“模块输入成分”的“总用量”
 				Double dosage = Double.parseDouble(ingre.getCon_dosage());
-				sheet.getRow(21).getCell(12)
+				sheet.getRow(22).getCell(12)
 						.setCellValue(String.format("%.2f", dosage));
-				sheet.getRow(21).getCell(12).setCellStyle(style);
+				sheet.getRow(22).getCell(12).setCellStyle(style);
 			} catch (SecurityException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -445,8 +460,9 @@ public class CreateMainFormExcel {
 				short k = 13;
 				// 计算用量总和
 				// double sum3 = 0;
-				// 第12-20行填写精矿用量(2017.2.15)
-				for (int i = 12; i <= 20; i++) {
+				// 第10-21行填写精矿用量(2017.2.15)
+                System.out.println(sum);
+				for (int i = 10; i <= 21; i++) {
 					// 不需要5、6、7号仓，直接跳过
 					if (k == 17)
 						k = 20;

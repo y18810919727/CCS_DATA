@@ -7,6 +7,7 @@ var dateArray = new Array();
 var arrayLength;
 
 function getAllDate() {
+    f_tcalInit();
 	$.ajax({
 		url : '/CCS/getalldate.servlet',// 后台访问目标
 		data : {

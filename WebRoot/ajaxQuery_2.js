@@ -251,7 +251,7 @@ function getOneData(){
 	var text15 = null; var text16 = null; var text17 = null; var text18 = null;
 	var text19 = null; var text20 = null; var text21 = null; var text22 = null;
 	var text23 = null; var text24 = null; var text25 = null; var text26 = null; 
-	var text27 = null; var text28 = null; var texth11 = null; var texth12 = null; 
+	var text27 = null; var text28 = null; var texth11 = null; var texth12 = null; var texth13 = null; var texth14 = null; var texth15 = null;
 	var textgrade = null; var textoxypur = null; var textoxyconc = null;
 	$("#text_01").attr("value",number);
 	$.each(data1, function(index, obj) {
@@ -319,7 +319,13 @@ function getOneData(){
 				texth11 = value;
 			}if(key == "h12used"){
 				texth12 = value;
-			}if(key == "grade"){
+			}if(key == "h13used"){
+                texth13 = value;
+            }if(key == "h14used"){
+                texth14 = value;
+            }if(key == "h15used"){
+                texth15 = value;
+            }if(key == "grade"){
 				textgrade = value;
 			}if(key == "oxypur"){
 				textoxypur = value;
@@ -363,6 +369,9 @@ function getOneData(){
 			$("#text_28").attr("value",text28);
 			$("#text_h11").attr("value",texth11);
 			$("#text_h12").attr("value",texth12);
+            $("#text_h13").attr("value",texth13);
+            $("#text_h14").attr("value",texth14);
+            $("#text_h15").attr("value",texth15);
 			if(isNaN(textgrade))
 				$("#text_grade").attr("value","");
 			else

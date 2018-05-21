@@ -280,17 +280,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select></td>
 					<td><input type="text" name="NO1_Cu" id="NO1_Cu"
@@ -337,17 +337,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -395,17 +395,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -453,17 +453,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -511,17 +511,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -569,17 +569,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -627,17 +627,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -685,17 +685,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>
@@ -743,17 +743,17 @@
 							<option>BOLO</option>
 							<option>CCS矿</option>
 							<option>SCM</option>
-							<option>MOPANI</option>
 							<option>RONGBO</option>
 							<option>KML</option>
-							<option>COMILU</option>
                             <option>NST</option>
                             <option>HRC</option>
                             <option>GS</option>
-                            <option>Luna</option>
+                            <option>LUNA</option>
                             <option>KCM</option>
-                            <option>Comliu</option>
+                            <option>COMILU</option>
                             <option>MOPANI</option>
+							<option>LUANSHYA渣精矿</option>
+							<option>CCS-CT</option>
 							<option>(无矿)</option>
 					</select>
 					</td>

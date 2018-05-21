@@ -91,6 +91,33 @@ public class Ingredient {
 	private String NO12_MgO;
 	private String NO12_Al2O3;
 	private String NO12_Co;
+	private String NO13_name;
+	private String NO13_Cu;
+	private String NO13_Fe;
+	private String NO13_S;
+	private String NO13_SiO2;
+	private String NO13_CaO;
+	private String NO13_MgO;
+	private String NO13_Al2O3;
+	private String NO13_Co;
+	private String NO14_name;
+	private String NO14_Cu;
+	private String NO14_Fe;
+	private String NO14_S;
+	private String NO14_SiO2;
+	private String NO14_CaO;
+	private String NO14_MgO;
+	private String NO14_Al2O3;
+	private String NO14_Co;
+	private String NO15_name;
+	private String NO15_Cu;
+	private String NO15_Fe;
+	private String NO15_S;
+	private String NO15_SiO2;
+	private String NO15_CaO;
+	private String NO15_MgO;
+	private String NO15_Al2O3;
+	private String NO15_Co;
 	private String Con_Cu;
 	private String Con_Fe;
 	private String Con_S;
@@ -100,6 +127,7 @@ public class Ingredient {
 	private String Con_Al2O3;
 	private String Con_Co;
 	private String Con_dosage;
+	private boolean is_used;
 
 	public int getId() {
 		return id;
@@ -843,5 +871,229 @@ public class Ingredient {
 
 	public void setCon_dosage(String con_dosage) {
 		Con_dosage = con_dosage;
+	}
+
+	public boolean isIs_used() {
+		return is_used;
+	}
+
+	public void setIs_used(boolean is_used) {
+		this.is_used = is_used;
+	}
+
+	public String getNO13_name() {
+		return NO13_name;
+	}
+
+	public void setNO13_name(String NO13_name) {
+		this.NO13_name = NO13_name;
+	}
+
+	public String getNO13_Cu() {
+		return NO13_Cu;
+	}
+
+	public void setNO13_Cu(String NO13_Cu) {
+		this.NO13_Cu = NO13_Cu;
+	}
+
+	public String getNO13_Fe() {
+		return NO13_Fe;
+	}
+
+	public void setNO13_Fe(String NO13_Fe) {
+		this.NO13_Fe = NO13_Fe;
+	}
+
+	public String getNO13_S() {
+		return NO13_S;
+	}
+
+	public void setNO13_S(String NO13_S) {
+		this.NO13_S = NO13_S;
+	}
+
+	public String getNO13_SiO2() {
+		return NO13_SiO2;
+	}
+
+	public void setNO13_SiO2(String NO13_SiO2) {
+		this.NO13_SiO2 = NO13_SiO2;
+	}
+
+	public String getNO13_CaO() {
+		return NO13_CaO;
+	}
+
+	public void setNO13_CaO(String NO13_CaO) {
+		this.NO13_CaO = NO13_CaO;
+	}
+
+	public String getNO13_MgO() {
+		return NO13_MgO;
+	}
+
+	public void setNO13_MgO(String NO13_MgO) {
+		this.NO13_MgO = NO13_MgO;
+	}
+
+	public String getNO13_Al2O3() {
+		return NO13_Al2O3;
+	}
+
+	public void setNO13_Al2O3(String NO13_Al2O3) {
+		this.NO13_Al2O3 = NO13_Al2O3;
+	}
+
+	public String getNO13_Co() {
+		return NO13_Co;
+	}
+
+	public void setNO13_Co(String NO13_Co) {
+		this.NO13_Co = NO13_Co;
+	}
+
+	public String getNO14_name() {
+		return NO14_name;
+	}
+
+	public void setNO14_name(String NO14_name) {
+		this.NO14_name = NO14_name;
+	}
+
+	public String getNO14_Cu() {
+		return NO14_Cu;
+	}
+
+	public void setNO14_Cu(String NO14_Cu) {
+		this.NO14_Cu = NO14_Cu;
+	}
+
+	public String getNO14_Fe() {
+		return NO14_Fe;
+	}
+
+	public void setNO14_Fe(String NO14_Fe) {
+		this.NO14_Fe = NO14_Fe;
+	}
+
+	public String getNO14_S() {
+		return NO14_S;
+	}
+
+	public void setNO14_S(String NO14_S) {
+		this.NO14_S = NO14_S;
+	}
+
+	public String getNO14_SiO2() {
+		return NO14_SiO2;
+	}
+
+	public void setNO14_SiO2(String NO14_SiO2) {
+		this.NO14_SiO2 = NO14_SiO2;
+	}
+
+	public String getNO14_CaO() {
+		return NO14_CaO;
+	}
+
+	public void setNO14_CaO(String NO14_CaO) {
+		this.NO14_CaO = NO14_CaO;
+	}
+
+	public String getNO14_MgO() {
+		return NO14_MgO;
+	}
+
+	public void setNO14_MgO(String NO14_MgO) {
+		this.NO14_MgO = NO14_MgO;
+	}
+
+	public String getNO14_Al2O3() {
+		return NO14_Al2O3;
+	}
+
+	public void setNO14_Al2O3(String NO14_Al2O3) {
+		this.NO14_Al2O3 = NO14_Al2O3;
+	}
+
+	public String getNO14_Co() {
+		return NO14_Co;
+	}
+
+	public void setNO14_Co(String NO14_Co) {
+		this.NO14_Co = NO14_Co;
+	}
+
+	public String getNO15_name() {
+		return NO15_name;
+	}
+
+	public void setNO15_name(String NO15_name) {
+		this.NO15_name = NO15_name;
+	}
+
+	public String getNO15_Cu() {
+		return NO15_Cu;
+	}
+
+	public void setNO15_Cu(String NO15_Cu) {
+		this.NO15_Cu = NO15_Cu;
+	}
+
+	public String getNO15_Fe() {
+		return NO15_Fe;
+	}
+
+	public void setNO15_Fe(String NO15_Fe) {
+		this.NO15_Fe = NO15_Fe;
+	}
+
+	public String getNO15_S() {
+		return NO15_S;
+	}
+
+	public void setNO15_S(String NO15_S) {
+		this.NO15_S = NO15_S;
+	}
+
+	public String getNO15_SiO2() {
+		return NO15_SiO2;
+	}
+
+	public void setNO15_SiO2(String NO15_SiO2) {
+		this.NO15_SiO2 = NO15_SiO2;
+	}
+
+	public String getNO15_CaO() {
+		return NO15_CaO;
+	}
+
+	public void setNO15_CaO(String NO15_CaO) {
+		this.NO15_CaO = NO15_CaO;
+	}
+
+	public String getNO15_MgO() {
+		return NO15_MgO;
+	}
+
+	public void setNO15_MgO(String NO15_MgO) {
+		this.NO15_MgO = NO15_MgO;
+	}
+
+	public String getNO15_Al2O3() {
+		return NO15_Al2O3;
+	}
+
+	public void setNO15_Al2O3(String NO15_Al2O3) {
+		this.NO15_Al2O3 = NO15_Al2O3;
+	}
+
+	public String getNO15_Co() {
+		return NO15_Co;
+	}
+
+	public void setNO15_Co(String NO15_Co) {
+		this.NO15_Co = NO15_Co;
 	}
 }

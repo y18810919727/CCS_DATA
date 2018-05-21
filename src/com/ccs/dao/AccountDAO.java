@@ -42,6 +42,7 @@ public class AccountDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		DBUtil.closeConnection();
 		return user;
 	}
 	//更新用户密码，并返回操作结果
@@ -59,6 +60,7 @@ public class AccountDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		DBUtil.closeConnection();
 		return res;
 
 	}
@@ -76,6 +78,7 @@ public class AccountDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		DBUtil.closeConnection();
 		if (result > 0)
 			return "succeed";
 		else

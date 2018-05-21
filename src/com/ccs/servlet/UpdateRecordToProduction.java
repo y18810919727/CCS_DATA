@@ -58,7 +58,7 @@ public class UpdateRecordToProduction extends HttpServlet {
 		*/
 		//接受用户提交的信息
 				String produceNo = new String(request.getParameter("produceNo").
-						getBytes("ISO-8859-1"), "utf-8");
+						getBytes("utf-8"), "utf-8");
 				String duty = request.getParameter("duty");
 				String number = request.getParameter("number");
 				String date = request.getParameter("date");
@@ -72,11 +72,11 @@ public class UpdateRecordToProduction extends HttpServlet {
 				String targetSiO2CaO = change_DecimalFormat(request.getParameter("targetSiO2CaO"));
 				String factSiO2CaO = change_DecimalFormat(request.getParameter("factSiO2CaO"));
 				String magnetic_force = new String(request.getParameter("magnetic_force").
-						getBytes("ISO-8859-1"), "utf-8");
+						getBytes("utf-8"), "utf-8");
 				String drum_hole = new String(request.getParameter("drum_hole").
-						getBytes("ISO-8859-1"), "utf-8");
+						getBytes("utf-8"), "utf-8");
 				String color = new String(request.getParameter("color").
-						getBytes("ISO-8859-1"), "utf-8"); 
+						getBytes("utf-8"), "utf-8");
 				String nozzle_pressure = change_DecimalFormat(request.getParameter("nozzle_pressure"));
 				String fuel_ratio = change_DecimalFormat(request.getParameter("fuel_ratio"));
 				String amountPerHour = change_DecimalFormat(request.getParameter("amountPerHour"));
@@ -99,6 +99,9 @@ public class UpdateRecordToProduction extends HttpServlet {
 				// 新增11,12号仓
 				String h11used = change_DecimalFormat(request.getParameter("h11used"));
 				String h12used = change_DecimalFormat(request.getParameter("h12used"));
+				String h13used = change_DecimalFormat(request.getParameter("h13used"));
+				String h14used = change_DecimalFormat(request.getParameter("h14used"));
+				String h15used = change_DecimalFormat(request.getParameter("h15used"));
 				String grade = change_DecimalFormat(request.getParameter("grade"));
 				//将数据封装进production对象中（没有createdate）
 				Production p = new Production();
@@ -137,6 +140,9 @@ public class UpdateRecordToProduction extends HttpServlet {
 				p.setH10used(h10used);
 				p.setH11used(h11used);
 				p.setH12used(h12used);
+				p.setH13used(h13used);
+				p.setH14used(h14used);
+				p.setH15used(h15used);
 				p.setGrade(grade);
 				// 在production表中修改一条记录
 				try {

@@ -60,9 +60,11 @@ public class InsertToProduction extends HttpServlet {
 		Date currentTime = new Date();// 得到当前系统时间
 		String createdate = formatter.format(currentTime); // 将日期时间格式化
 		// 接受用户提交的信息
+//		String produceNo = new String(request.getParameter("produceNo").
+//				getBytes("ISO-8859-1"), "utf-8");
 		String produceNo = new String(request.getParameter("produceNo").
-				getBytes("ISO-8859-1"), "utf-8");
-		System.out.println("当班人是：" + produceNo);
+				getBytes("utf-8"), "utf-8");
+		System.out.println("charset: utf-8 to charset: utf-8");
 		String duty = request.getParameter("duty");
 		String number = request.getParameter("number");
 		String date = request.getParameter("date");
@@ -76,11 +78,11 @@ public class InsertToProduction extends HttpServlet {
 		String targetSiO2CaO = change_DecimalFormat(request.getParameter("targetSiO2CaO"));
 		String factSiO2CaO = change_DecimalFormat(request.getParameter("factSiO2CaO"));
 		String magnetic_force = new String(request.getParameter("magnetic_force").
-				getBytes("ISO-8859-1"), "utf-8");
+				getBytes("utf-8"), "utf-8");
 		String drum_hole = new String(request.getParameter("drum_hole").
-				getBytes("ISO-8859-1"), "utf-8");
+				getBytes("utf-8"), "utf-8");
 		String color = new String(request.getParameter("color").
-				getBytes("ISO-8859-1"), "utf-8"); 
+				getBytes("utf-8"), "utf-8");
 		String nozzle_pressure = change_DecimalFormat(request.getParameter("nozzle_pressure"));
 		String fuel_ratio = change_DecimalFormat(request.getParameter("fuel_ratio"));
 		String amountPerHour = change_DecimalFormat(request.getParameter("amountPerHour"));
@@ -101,6 +103,9 @@ public class InsertToProduction extends HttpServlet {
 		String h10used = change_DecimalFormat(request.getParameter("h10used"));
 		String h11used = change_DecimalFormat(request.getParameter("h11used"));
 		String h12used = change_DecimalFormat(request.getParameter("h12used"));
+		String h13used = change_DecimalFormat(request.getParameter("h13used"));
+		String h14used = change_DecimalFormat(request.getParameter("h14used"));
+		String h15used = change_DecimalFormat(request.getParameter("h15used"));
 		// 将数据封装进production对象中
 		Production p = new Production();
 		p.setCreatedate(createdate);
@@ -139,6 +144,9 @@ public class InsertToProduction extends HttpServlet {
 		p.setH10used(h10used);
 		p.setH11used(h11used);
 		p.setH12used(h12used);
+		p.setH13used(h13used);
+		p.setH14used(h14used);
+		p.setH15used(h15used);
 		// 设置本次加入的记录“熔炼情况评分”为“待评分”
 		p.setGrade("待评分");
 		//向production表中插入一条记录

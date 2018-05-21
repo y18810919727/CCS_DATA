@@ -65,7 +65,7 @@ public class CreateProductionExcel {
 		}
 		for (int i = 0; i <plist.size()+1; i++) {
 			row = sheet.createRow((int) i);
-			for (int j = 0; j < 35; j++) {
+			for (int j = 0; j < 38; j++) {
 				cell = row.createCell((short) j);
 			}
 		}
@@ -135,10 +135,16 @@ public class CreateProductionExcel {
 		sheet.getRow(0).getCell(31).setCellStyle(style);
 		sheet.getRow(0).getCell(32).setCellValue("12#");
 		sheet.getRow(0).getCell(32).setCellStyle(style);
-		sheet.getRow(0).getCell(33).setCellValue("添加时间");
+		sheet.getRow(0).getCell(33).setCellValue("13#");
 		sheet.getRow(0).getCell(33).setCellStyle(style);
-		sheet.getRow(0).getCell(34).setCellValue("熔炼状况评分");
+		sheet.getRow(0).getCell(34).setCellValue("14#");
 		sheet.getRow(0).getCell(34).setCellStyle(style);
+		sheet.getRow(0).getCell(35).setCellValue("15#");
+		sheet.getRow(0).getCell(35).setCellStyle(style);
+		sheet.getRow(0).getCell(36).setCellValue("添加时间");
+		sheet.getRow(0).getCell(36).setCellStyle(style);
+		sheet.getRow(0).getCell(37).setCellValue("熔炼状况评分");
+		sheet.getRow(0).getCell(37).setCellStyle(style);
 		
 		if (plist != null) {
 			// 初始化production表
@@ -152,7 +158,7 @@ public class CreateProductionExcel {
 					if("0".equals(p.getSampleNo())) continue;
 					// 从第6个声明的字段开始
 					short k = 3;
-					for (int j = 0; j <= 34; j++) {
+					for (int j = 0; j <= 37; j++) {
 						// 依次获取声明的变量名
 						String fieldName = fields[k].getName();
 						// 生成get方法名

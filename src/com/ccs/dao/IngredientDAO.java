@@ -113,26 +113,55 @@ public class IngredientDAO {
 			i.setNO12_CaO(rs.getString(73));
 			i.setNO12_MgO(rs.getString(74));
 			i.setNO12_Al2O3(rs.getString(75));
-			i.setNO1_name(rs.getString(76));
-			i.setNO2_name(rs.getString(77));
-			i.setNO3_name(rs.getString(78));
-			i.setNO4_name(rs.getString(79));
-			i.setNO8_name(rs.getString(80));
-			i.setNO9_name(rs.getString(81));
-			i.setNO10_name(rs.getString(82));
-			i.setNO11_name(rs.getString(83));
-			i.setNO12_name(rs.getString(84));
-			i.setCon_Cu(rs.getString(85));
-			i.setCon_Fe(rs.getString(86));
-			i.setCon_S(rs.getString(87));
-			i.setCon_Co(rs.getString(88));
-			i.setCon_SiO2(rs.getString(89));
-			i.setCon_CaO(rs.getString(90));
-			i.setCon_MgO(rs.getString(91));
-			i.setCon_Al2O3(rs.getString(92));
-			i.setCon_dosage(rs.getString(93));
+			i.setNO13_Cu(rs.getString(76));
+			i.setNO13_Fe(rs.getString(77));
+			i.setNO13_S(rs.getString(78));
+			i.setNO13_Co(rs.getString(79));
+			i.setNO13_SiO2(rs.getString(80));
+			i.setNO13_CaO(rs.getString(81));
+			i.setNO13_MgO(rs.getString(82));
+			i.setNO13_Al2O3(rs.getString(83));
+			i.setNO14_Cu(rs.getString(84));
+			i.setNO14_Fe(rs.getString(85));
+			i.setNO14_S(rs.getString(86));
+			i.setNO14_Co(rs.getString(87));
+			i.setNO14_SiO2(rs.getString(88));
+			i.setNO14_CaO(rs.getString(89));
+			i.setNO14_MgO(rs.getString(90));
+			i.setNO14_Al2O3(rs.getString(91));
+			i.setNO15_Cu(rs.getString(92));
+			i.setNO15_Fe(rs.getString(93));
+			i.setNO15_S(rs.getString(94));
+			i.setNO15_Co(rs.getString(95));
+			i.setNO15_SiO2(rs.getString(96));
+			i.setNO15_CaO(rs.getString(97));
+			i.setNO15_MgO(rs.getString(98));
+			i.setNO15_Al2O3(rs.getString(99));
+			i.setNO1_name(rs.getString(100));
+			i.setNO2_name(rs.getString(101));
+			i.setNO3_name(rs.getString(102));
+			i.setNO4_name(rs.getString(103));
+			i.setNO8_name(rs.getString(104));
+			i.setNO9_name(rs.getString(105));
+			i.setNO10_name(rs.getString(106));
+			i.setNO11_name(rs.getString(107));
+			i.setNO12_name(rs.getString(108));
+			i.setNO13_name(rs.getString(109));
+			i.setNO14_name(rs.getString(110));
+			i.setNO15_name(rs.getString(111));
+			i.setCon_Cu(rs.getString(112));
+			i.setCon_Fe(rs.getString(113));
+			i.setCon_S(rs.getString(114));
+			i.setCon_Co(rs.getString(115));
+			i.setCon_SiO2(rs.getString(116));
+			i.setCon_CaO(rs.getString(117));
+			i.setCon_MgO(rs.getString(118));
+			i.setCon_Al2O3(rs.getString(119));
+			i.setCon_dosage(rs.getString(120));
+			i.setIs_used(rs.getBoolean(121));
 			list.add(i);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -227,25 +256,54 @@ public class IngredientDAO {
 			i.setNO12_CaO(rs.getString(73));
 			i.setNO12_MgO(rs.getString(74));
 			i.setNO12_Al2O3(rs.getString(75));
-			i.setNO1_name(rs.getString(76));
-			i.setNO2_name(rs.getString(77));
-			i.setNO3_name(rs.getString(78));
-			i.setNO4_name(rs.getString(79));
-			i.setNO8_name(rs.getString(80));
-			i.setNO9_name(rs.getString(81));
-			i.setNO10_name(rs.getString(82));
-			i.setNO11_name(rs.getString(83));
-			i.setNO12_name(rs.getString(84));
-			i.setCon_Cu(rs.getString(85));
-			i.setCon_Fe(rs.getString(86));
-			i.setCon_S(rs.getString(87));
-			i.setCon_Co(rs.getString(88));
-			i.setCon_SiO2(rs.getString(89));
-			i.setCon_CaO(rs.getString(90));
-			i.setCon_MgO(rs.getString(91));
-			i.setCon_Al2O3(rs.getString(92));
-			i.setCon_dosage(rs.getString(93));
+			i.setNO13_Cu(rs.getString(76));
+			i.setNO13_Fe(rs.getString(77));
+			i.setNO13_S(rs.getString(78));
+			i.setNO13_Co(rs.getString(79));
+			i.setNO13_SiO2(rs.getString(80));
+			i.setNO13_CaO(rs.getString(81));
+			i.setNO13_MgO(rs.getString(82));
+			i.setNO13_Al2O3(rs.getString(83));
+			i.setNO14_Cu(rs.getString(84));
+			i.setNO14_Fe(rs.getString(85));
+			i.setNO14_S(rs.getString(86));
+			i.setNO14_Co(rs.getString(87));
+			i.setNO14_SiO2(rs.getString(88));
+			i.setNO14_CaO(rs.getString(89));
+			i.setNO14_MgO(rs.getString(90));
+			i.setNO14_Al2O3(rs.getString(91));
+			i.setNO15_Cu(rs.getString(92));
+			i.setNO15_Fe(rs.getString(93));
+			i.setNO15_S(rs.getString(94));
+			i.setNO15_Co(rs.getString(95));
+			i.setNO15_SiO2(rs.getString(96));
+			i.setNO15_CaO(rs.getString(97));
+			i.setNO15_MgO(rs.getString(98));
+			i.setNO15_Al2O3(rs.getString(99));
+			i.setNO1_name(rs.getString(100));
+			i.setNO2_name(rs.getString(101));
+			i.setNO3_name(rs.getString(102));
+			i.setNO4_name(rs.getString(103));
+			i.setNO8_name(rs.getString(104));
+			i.setNO9_name(rs.getString(105));
+			i.setNO10_name(rs.getString(106));
+			i.setNO11_name(rs.getString(107));
+			i.setNO12_name(rs.getString(108));
+			i.setNO13_name(rs.getString(109));
+			i.setNO14_name(rs.getString(110));
+			i.setNO15_name(rs.getString(111));
+			i.setCon_Cu(rs.getString(112));
+			i.setCon_Fe(rs.getString(113));
+			i.setCon_S(rs.getString(114));
+			i.setCon_Co(rs.getString(115));
+			i.setCon_SiO2(rs.getString(116));
+			i.setCon_CaO(rs.getString(117));
+			i.setCon_MgO(rs.getString(118));
+			i.setCon_Al2O3(rs.getString(119));
+			i.setCon_dosage(rs.getString(120));
+			i.setIs_used(rs.getBoolean(121));
 		}
+		DBUtil.closeConnection();
 		return i;
 	}
 
@@ -267,6 +325,7 @@ public class IngredientDAO {
 			String s = new String(rs.getString(1));
 			list.add(s);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -293,9 +352,13 @@ public class IngredientDAO {
 				+ "NO10_CaO,NO10_MgO,NO10_Al2O3,NO11_Cu,NO11_Fe,NO11_S,"
 				+ "NO11_Co,NO11_SiO2,NO11_CaO,NO11_MgO,NO11_Al2O3,NO12_Cu,"
 				+ "NO12_Fe,NO12_S,NO12_Co,NO12_SiO2,NO12_CaO,NO12_MgO,"
-				+ "NO12_Al2O3,NO1_name,NO2_name,NO3_name,NO4_name,NO8_name,"
-				+ "NO9_name,NO10_name,NO11_name,NO12_name,Con_Cu,Con_Fe,"
-				+ "Con_S,Con_Co,Con_SiO2,Con_CaO,Con_MgO,Con_Al2O3,Con_dosage) ";
+				+ "NO12_Al2O3,"
+				+ "NO13_Cu,NO13_Fe,NO13_S,NO13_Co,NO13_SiO2,NO13_CaO,NO13_MgO,NO13_Al2O3,"
+				+ "NO14_Cu,NO14_Fe,NO14_S,NO14_Co,NO14_SiO2,NO14_CaO,NO14_MgO,NO14_Al2O3,"
+				+ "NO15_Cu,NO15_Fe,NO15_S,NO15_Co,NO15_SiO2,NO15_CaO,NO15_MgO,NO15_Al2O3,"
+				+ "NO1_name,NO2_name,NO3_name,NO4_name,NO8_name,"
+				+ "NO9_name,NO10_name,NO11_name,NO12_name,NO13_name,NO14_name,NO15_name,Con_Cu,Con_Fe,"
+				+ "Con_S,Con_Co,Con_SiO2,Con_CaO,Con_MgO,Con_Al2O3,Con_dosage,is_used) ";
 		String val = "values('" + e.getNumber() + "','" + e.getDate() + "','"
 				+ e.getNO1_Cu() + "','" + e.getNO1_Fe() + "','" + e.getNO1_S()
 				+ "','" + e.getNO1_Co() + "','" + e.getNO1_SiO2() + "','"
@@ -330,19 +393,35 @@ public class IngredientDAO {
 				+ e.getNO12_S() + "','" + e.getNO12_Co() + "','"
 				+ e.getNO12_SiO2() + "','" + e.getNO12_CaO() + "','"
 				+ e.getNO12_MgO() + "','" + e.getNO12_Al2O3() + "','"
+				+ e.getNO13_Cu() + "','" + e.getNO13_Fe() + "','"
+				+ e.getNO13_S() + "','" + e.getNO13_Co() + "','"
+				+ e.getNO13_SiO2() + "','" + e.getNO13_CaO() + "','"
+				+ e.getNO13_MgO() + "','" + e.getNO13_Al2O3() + "','"
+				+ e.getNO14_Cu() + "','" + e.getNO14_Fe() + "','"
+				+ e.getNO14_S() + "','" + e.getNO14_Co() + "','"
+				+ e.getNO14_SiO2() + "','" + e.getNO14_CaO() + "','"
+				+ e.getNO14_MgO() + "','" + e.getNO14_Al2O3() + "','"
+				+ e.getNO15_Cu() + "','" + e.getNO15_Fe() + "','"
+				+ e.getNO15_S() + "','" + e.getNO15_Co() + "','"
+				+ e.getNO15_SiO2() + "','" + e.getNO15_CaO() + "','"
+				+ e.getNO15_MgO() + "','" + e.getNO15_Al2O3() + "','"
 				+ e.getNO1_name() + "','" + e.getNO2_name() + "','"
 				+ e.getNO3_name() + "','" + e.getNO4_name() + "','"
 				+ e.getNO8_name() + "','" + e.getNO9_name() + "','"
 				+ e.getNO10_name() + "','" + e.getNO11_name() + "','"
-				+ e.getNO12_name() + "','" + e.getCon_Cu() + "','"
+				+ e.getNO12_name() + "','" + e.getNO13_name() + "','"
+				+ e.getNO14_name() + "','" + e.getNO15_name() + "','"
+				+ e.getCon_Cu() + "','"
 				+ e.getCon_Fe() + "','" + e.getCon_S() + "','" + e.getCon_Co()
 				+ "','" + e.getCon_SiO2() + "','" + e.getCon_CaO() + "','"
 				+ e.getCon_MgO() + "','" + e.getCon_Al2O3() + "','"
-				+ e.getCon_dosage() + "')";
+				+ e.getCon_dosage() + "','"+(e.isIs_used()?"1":"0")+"')";
 		String sql = exe + col + val;
+		System.out.println(sql);
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -406,23 +485,35 @@ public class IngredientDAO {
 				+ "',NO12_Co='" + e.getNO12_Co() + "',NO12_SiO2='"
 				+ e.getNO12_SiO2() + "',NO12_CaO='" + e.getNO12_CaO()
 				+ "',NO12_MgO='" + e.getNO12_MgO() + "',NO12_Al2O3='"
-				+ e.getNO12_Al2O3() + "',NO1_name='" + e.getNO1_name()
+				+ e.getNO12_Al2O3() 
+				+ "',NO13_Cu='" + e.getNO13_Cu() + "',NO13_Fe='" + e.getNO13_Fe() + "',NO13_S='" + e.getNO13_S() + "',NO13_Co='" + e.getNO13_Co() 
+				+ "',NO13_SiO2='"+ e.getNO13_SiO2() + "',NO13_CaO='" + e.getNO13_CaO()	+ "',NO13_MgO='" + e.getNO13_MgO() + "',NO13_Al2O3='"+ e.getNO13_Al2O3()
+				+ "',NO14_Cu='" + e.getNO14_Cu() + "',NO14_Fe='" + e.getNO14_Fe() + "',NO14_S='" + e.getNO14_S() + "',NO14_Co='" + e.getNO14_Co()
+				+ "',NO14_SiO2='"+ e.getNO14_SiO2() + "',NO14_CaO='" + e.getNO14_CaO()	+ "',NO14_MgO='" + e.getNO14_MgO() + "',NO14_Al2O3='"+ e.getNO14_Al2O3()
+				+ "',NO15_Cu='" + e.getNO15_Cu() + "',NO15_Fe='" + e.getNO15_Fe() + "',NO15_S='" + e.getNO15_S() + "',NO15_Co='" + e.getNO15_Co()
+				+ "',NO15_SiO2='"+ e.getNO15_SiO2() + "',NO15_CaO='" + e.getNO15_CaO()	+ "',NO15_MgO='" + e.getNO15_MgO() + "',NO15_Al2O3='"+ e.getNO15_Al2O3()
+				+ "',NO1_name='" + e.getNO1_name()
 				+ "',NO2_name='" + e.getNO2_name() + "',NO3_name='"
 				+ e.getNO3_name() + "',NO4_name='" + e.getNO4_name()
 				+ "',NO8_name='" + e.getNO8_name() + "',NO9_name='"
 				+ e.getNO9_name() + "',NO10_name='" + e.getNO10_name()
 				+ "',NO11_name='" + e.getNO11_name() + "',NO12_name='"
-				+ e.getNO12_name() + "',Con_Cu='" + e.getCon_Cu()
+				+ e.getNO12_name()
+				+ "',NO13_name='" + e.getNO13_name()
+				+ "',NO14_name='" + e.getNO14_name()
+				+ "',NO15_name='" + e.getNO15_name()
+				+ "',Con_Cu='" + e.getCon_Cu()
 				+ "',Con_Fe='" + e.getCon_Fe() + "',Con_S='" + e.getCon_S()
 				+ "',Con_Co='" + e.getCon_Co() + "',Con_SiO2='"
 				+ e.getCon_SiO2() + "',Con_CaO='" + e.getCon_CaO()
 				+ "',Con_MgO='" + e.getCon_MgO() + "',Con_Al2O3='"
-				+ e.getCon_Al2O3() + "',Con_dosage='" + e.getCon_dosage() + "'";
+				+ e.getCon_Al2O3() + "',Con_dosage='" + e.getCon_dosage() + "',is_used='" + (e.isIs_used()?"1":"0") + "'";
 		String cond = " where number='" + e.getNumber() + "'";
 		String sql = exe + col + cond;
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -446,6 +537,7 @@ public class IngredientDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else

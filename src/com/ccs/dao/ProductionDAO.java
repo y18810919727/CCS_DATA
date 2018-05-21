@@ -74,12 +74,17 @@ public class ProductionDAO {
 			p.setH10used(rs.getString(32));
 			p.setH11used(rs.getString(33));
 			p.setH12used(rs.getString(34));
-			p.setCreatedate(rs.getString(35));
-			p.setGrade(rs.getString(36));
-			p.setOxypur(rs.getString(37));
-			p.setOxyconc(rs.getString(38));
+			p.setH13used(rs.getString(35));
+			p.setH14used(rs.getString(36));
+			p.setH15used(rs.getString(37));
+			p.setCreatedate(rs.getString(38));
+			p.setGrade(rs.getString(39));
+			p.setOxypur(rs.getString(40));
+			p.setOxyconc(rs.getString(41));
+
 			list.add(p);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -133,12 +138,16 @@ public class ProductionDAO {
 			p.setH10used(rs.getString(32));
 			p.setH11used(rs.getString(33));
 			p.setH12used(rs.getString(34));
-			p.setCreatedate(rs.getString(35));
-			p.setGrade(rs.getString(36));
-			p.setOxypur(rs.getString(37));
-			p.setOxyconc(rs.getString(38));
+			p.setH13used(rs.getString(35));
+			p.setH14used(rs.getString(36));
+			p.setH15used(rs.getString(37));
+			p.setCreatedate(rs.getString(38));
+			p.setGrade(rs.getString(39));
+			p.setOxypur(rs.getString(40));
+			p.setOxyconc(rs.getString(41));
 			list.add(p);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -194,12 +203,16 @@ public class ProductionDAO {
 			p.setH10used(rs.getString(32));
 			p.setH11used(rs.getString(33));
 			p.setH12used(rs.getString(34));
-			p.setCreatedate(rs.getString(35));
-			p.setGrade(rs.getString(36));
-			p.setOxypur(rs.getString(37));
-			p.setOxyconc(rs.getString(38));
+			p.setH13used(rs.getString(35));
+			p.setH14used(rs.getString(36));
+			p.setH15used(rs.getString(37));
+			p.setCreatedate(rs.getString(38));
+			p.setGrade(rs.getString(39));
+			p.setOxypur(rs.getString(40));
+			p.setOxyconc(rs.getString(41));
 			list.add(p);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -221,7 +234,7 @@ public class ProductionDAO {
 				+ "factSiO2CaO,magnetic_force,drum_hole,color,nozzle_pressure,"
 				+ "fuel_ratio,amountPerHour,time,air_volume,h1used,h2used,h3used,"
 				+ "h4used,h5used,h6used,h7used,h8used,h9used,h10used,h11used,"
-				+ "h12used,createdate,grade,oxypur,oxyconc) ";
+				+ "h12used,h13used,h14used,h15used,createdate,grade,oxypur,oxyconc) ";
 		String val = "values('" + p.getNumber() + "','" + p.getDate() + "','"
 				+ p.getProduceNo() + "','" + p.getDuty() + "','"
 				+ p.getSampleNo() + "','" + p.getTargetMatte() + "','"
@@ -237,13 +250,16 @@ public class ProductionDAO {
 				+ "','" + p.getH5used() + "','" + p.getH6used() + "','"
 				+ p.getH7used() + "','" + p.getH8used() + "','" + p.getH9used()
 				+ "','" + p.getH10used() + "','" + p.getH11used() + "','"
-				+ p.getH12used() + "','" + p.getCreatedate() + "','"
+				+ p.getH12used() +"','"+ p.getH13used() + "','" + p.getH14used() + "','"
+				+ p.getH15used()+ "','" + p.getCreatedate() + "','"
 				+ p.getGrade() + "','" + p.getOxypur() + "','" + p.getOxyconc()
 				+ "')";
 		String sql = exe + col + val;
+		System.out.println(sql);
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -282,7 +298,10 @@ public class ProductionDAO {
 				+ "',h7used='" + p.getH7used() + "',h8used='" + p.getH8used()
 				+ "',h9used='" + p.getH9used() + "',h10used='" + p.getH10used()
 				+ "',h11used='" + p.getH11used() + "',h12used='"
-				+ p.getH12used() + "',grade='" + p.getGrade() + "',oxypur='"
+				+ p.getH12used() + "',h13used='" + p.getH13used()
+				+ "',h14used='" + p.getH14used() + "',h15used='"
+				+ p.getH15used()
+				+ "',grade='" + p.getGrade() + "',oxypur='"
 				+ p.getOxypur() + "',oxyconc='" + p.getOxyconc() + "'";
 		String cond = " where sampleNo='" + p.getSampleNo() + "' and number='"
 				+ p.getNumber() + "'";
@@ -290,6 +309,7 @@ public class ProductionDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -315,6 +335,7 @@ public class ProductionDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -342,6 +363,7 @@ public class ProductionDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -369,6 +391,7 @@ public class ProductionDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -392,6 +415,7 @@ public class ProductionDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else

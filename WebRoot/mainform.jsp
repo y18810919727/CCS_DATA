@@ -86,7 +86,13 @@
 				日期：<input type="text" name="date" class="tcal" id="date">
 				配料单号：<select style="width:150px" id="numid" name="numval">
 				</select> <input type="button" value="查询" style="width:60px;height:25px"
-					onclick="showStock()" /> <input type="submit" value="导出Excel"
+					onclick="showStock()" />
+				是否使用：<input style="width: 50px" type="text" id="isUsedID" name="isUsedName" readonly = readonly/>
+				<%--是否使用：<input><select style="width: 50px" id="isUsedID" name="isUsedName">--%>
+				<%--<option>是</option>--%>
+				<%--<option>否</option>--%>
+				<%--</select>--%>
+				<input type="submit" value="导出Excel"
 					style="width:90px;height:25px" /> <input type="button"
 					name="create" id="newformbtn" value="新建"
 					style="width:60px;height:25px" onclick="newform()" /> <input
@@ -300,6 +306,45 @@
 				<td>&nbsp;</td>
 			</tr>
 			<tr id="mrow10">
+				<td>13</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr id="mrow11">
+				<td>14</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr id="mrow12">
+				<td>15</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr id="mrow13">
 				<td>-</td>
 				<td>模块输入成分concentrate</td>
 				<td>&nbsp;</td>

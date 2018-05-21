@@ -26,6 +26,9 @@ public class Summary {
 	private String dosage10;
 	private String dosage11;
 	private String dosage12;
+	private String dosage13;
+	private String dosage14;
+	private String dosage15;
 	private String oxyconc;// 富氧浓度
 	private String digifax;// 数模
 	private String fuelratio;// 养料比
@@ -247,6 +250,30 @@ public class Summary {
 		this.dosage12 = dosage12;
 	}
 
+	public String getDosage13() {
+		return dosage13;
+	}
+
+	public void setDosage13(String dosage13) {
+		this.dosage13 = dosage13;
+	}
+
+	public String getDosage14() {
+		return dosage14;
+	}
+
+	public void setDosage14(String dosage14) {
+		this.dosage14 = dosage14;
+	}
+
+	public String getDosage15() {
+		return dosage15;
+	}
+
+	public void setDosage15(String dosage15) {
+		this.dosage15 = dosage15;
+	}
+
 	public String getOxyconc() {
 		return oxyconc;
 	}
@@ -407,4 +434,57 @@ public class Summary {
 		this.pre_sup_CaO = pre_sup_CaO;
 	}
 
+	@Override
+	public String toString() {
+		return "Summary{" +
+				"id=" + id +
+				", number='" + number + '\'' +
+				", date='" + date + '\'' +
+				", house1='" + house1 + '\'' +
+				", house2='" + house2 + '\'' +
+				", house3='" + house3 + '\'' +
+				", house4='" + house4 + '\'' +
+				", house5='" + house5 + '\'' +
+				", house6='" + house6 + '\'' +
+				", house7='" + house7 + '\'' +
+				", house8='" + house8 + '\'' +
+				", house9='" + house9 + '\'' +
+				", house10='" + house10 + '\'' +
+				", dosage1='" + dosage1 + '\'' +
+				", dosage2='" + dosage2 + '\'' +
+				", dosage3='" + dosage3 + '\'' +
+				", dosage4='" + dosage4 + '\'' +
+				", dosage5='" + dosage5 + '\'' +
+				", dosage6='" + dosage6 + '\'' +
+				", dosage7='" + dosage7 + '\'' +
+				", dosage8='" + dosage8 + '\'' +
+				", dosage9='" + dosage9 + '\'' +
+				", dosage10='" + dosage10 + '\'' +
+				", dosage11='" + dosage11 + '\'' +
+				", dosage12='" + dosage12 + '\'' +
+				", dosage13='" + dosage13 + '\'' +
+				", dosage14='" + dosage14 + '\'' +
+				", dosage15='" + dosage15 + '\'' +
+				", oxyconc='" + oxyconc + '\'' +
+				", digifax='" + digifax + '\'' +
+				", fuelratio='" + fuelratio + '\'' +
+				", airvolume='" + airvolume + '\'' +
+				", sup_SiO2='" + sup_SiO2 + '\'' +
+				", real_Matte='" + real_Matte + '\'' +
+				", real_Fe3O4='" + real_Fe3O4 + '\'' +
+				", real_SiO2Fe='" + real_SiO2Fe + '\'' +
+				", real_SiO2CaO='" + real_SiO2CaO + '\'' +
+				", sup_CaO='" + sup_CaO + '\'' +
+				", pre_oxyconc='" + pre_oxyconc + '\'' +
+				", pre_digifax='" + pre_digifax + '\'' +
+				", pre_fuelratio='" + pre_fuelratio + '\'' +
+				", pre_airvolume='" + pre_airvolume + '\'' +
+				", pre_sup_SiO2='" + pre_sup_SiO2 + '\'' +
+				", pre_real_matte='" + pre_real_matte + '\'' +
+				", pre_real_Fe3O4='" + pre_real_Fe3O4 + '\'' +
+				", pre_real_SiO2Fe='" + pre_real_SiO2Fe + '\'' +
+				", pre_real_SiO2CaO='" + pre_real_SiO2CaO + '\'' +
+				", pre_sup_CaO='" + pre_sup_CaO + '\'' +
+				'}';
+	}
 }

@@ -37,6 +37,9 @@ public class Production {
 	private String h10used;
 	private String h11used;
 	private String h12used;
+	private String h13used;
+	private String h14used;
+	private String h15used;
 	private String createdate;
 	private String grade;
 
@@ -326,6 +329,30 @@ public class Production {
 
 	public void setH12used(String h12used) {
 		this.h12used = h12used;
+	}
+
+	public String getH13used() {
+		return h13used;
+	}
+
+	public void setH13used(String h13used) {
+		this.h13used = h13used;
+	}
+
+	public String getH14used() {
+		return h14used;
+	}
+
+	public void setH14used(String h14used) {
+		this.h14used = h14used;
+	}
+
+	public String getH15used() {
+		return h15used;
+	}
+
+	public void setH15used(String h15used) {
+		this.h15used = h15used;
 	}
 
 	public String getCreatedate() {

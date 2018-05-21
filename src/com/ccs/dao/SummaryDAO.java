@@ -88,6 +88,7 @@ public class SummaryDAO {
 		}
 		if (noresult)
 			list = null;
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -153,6 +154,7 @@ public class SummaryDAO {
 			s.setPre_real_SiO2CaO(rs.getString(44));
 			s.setPre_sup_CaO(rs.getString(45));
 		}
+		DBUtil.closeConnection();
 		return s;
 	}
 
@@ -199,27 +201,31 @@ public class SummaryDAO {
 			s.setDosage10(rs.getString(23));
 			s.setDosage11(rs.getString(24));
 			s.setDosage12(rs.getString(25));
-			s.setOxyconc(rs.getString(26));
-			s.setDigifax(rs.getString(27));
-			s.setFuelratio(rs.getString(28));
-			s.setAirvolume(rs.getString(29));
-			s.setSup_SiO2(rs.getString(30));
-			s.setReal_Matte(rs.getString(31));
-			s.setReal_Fe3O4(rs.getString(32));
-			s.setReal_SiO2Fe(rs.getString(33));
-			s.setReal_SiO2CaO(rs.getString(34));
-			s.setSup_CaO(rs.getString(35));
-			s.setPre_oxyconc(rs.getString(36));
-			s.setPre_digifax(rs.getString(37));
-			s.setPre_fuelratio(rs.getString(38));
-			s.setPre_airvolume(rs.getString(39));
-			s.setPre_sup_SiO2(rs.getString(40));
-			s.setPre_real_matte(rs.getString(41));
-			s.setPre_real_Fe3O4(rs.getString(42));
-			s.setPre_real_SiO2Fe(rs.getString(43));
-			s.setPre_real_SiO2CaO(rs.getString(44));
-			s.setPre_sup_CaO(rs.getString(45));
+			s.setDosage13(rs.getString(26));
+			s.setDosage14(rs.getString(27));
+			s.setDosage15(rs.getString(28));
+			s.setOxyconc(rs.getString(29));
+			s.setDigifax(rs.getString(30));
+			s.setFuelratio(rs.getString(31));
+			s.setAirvolume(rs.getString(32));
+			s.setSup_SiO2(rs.getString(33));
+			s.setReal_Matte(rs.getString(34));
+			s.setReal_Fe3O4(rs.getString(35));
+			s.setReal_SiO2Fe(rs.getString(36));
+			s.setReal_SiO2CaO(rs.getString(37));
+			s.setSup_CaO(rs.getString(38));
+			s.setPre_oxyconc(rs.getString(39));
+			s.setPre_digifax(rs.getString(40));
+			s.setPre_fuelratio(rs.getString(41));
+			s.setPre_airvolume(rs.getString(42));
+			s.setPre_sup_SiO2(rs.getString(43));
+			s.setPre_real_matte(rs.getString(44));
+			s.setPre_real_Fe3O4(rs.getString(45));
+			s.setPre_real_SiO2Fe(rs.getString(46));
+			s.setPre_real_SiO2CaO(rs.getString(47));
+			s.setPre_sup_CaO(rs.getString(48));
 		}
+		DBUtil.closeConnection();
 		return s;
 	}
 
@@ -237,16 +243,17 @@ public class SummaryDAO {
 		List<String> list = null;
 		String sql = "select dosage1,dosage2,dosage3,dosage4,dosage5,"
 				+ "dosage6,dosage7,dosage8,dosage9,dosage10,dosage11,"
-				+ "dosage12 " + "from summary where number='" + num + "'";
+				+ "dosage12,"+ "dosage13,"+ "dosage14,"+ "dosage15 " + "from summary where number='" + num + "'";
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		ResultSet rs = pst.executeQuery();
 		if (rs.next()) {
 			list = new ArrayList<String>();
-			for (int i = 1; i <= 12; i++) {
+			for (int i = 1; i <= 15; i++) {
 				list.add(rs.getString(i));
 			}
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -265,7 +272,7 @@ public class SummaryDAO {
 		String col = "(number,date,house1,house2,house3,house4,house5,house6,"
 				+ "house7,house8,house9,house10,dosage1,dosage2,dosage3,dosage4,"
 				+ "dosage5,dosage6,dosage7,dosage8,dosage9,dosage10,dosage11,"
-				+ "dosage12,oxyconc,digifax,fuelratio,airvolume,sup_SiO2,"
+				+ "dosage12,dosage13,dosage14,dosage15,oxyconc,digifax,fuelratio,airvolume,sup_SiO2,"
 				+ "real_Matte,real_Fe3O4,real_SiO2Fe,real_SiO2CaO,sup_CaO,"
 				+ "pre_oxyconc,pre_digifax,pre_fuelratio,pre_airvolume,"
 				+ "pre_sup_SiO2,pre_real_matte,pre_real_Fe3O4,pre_real_SiO2Fe,"
@@ -281,6 +288,8 @@ public class SummaryDAO {
 				+ s.getDosage7() + "','" + s.getDosage8() + "','"
 				+ s.getDosage9() + "','" + s.getDosage10() + "','"
 				+ s.getDosage11() + "','" + s.getDosage12() + "','"
+				+ s.getDosage13() + "','" + s.getDosage14() + "','"
+				+ s.getDosage15() + "','"
 				+ s.getOxyconc() + "','" + s.getDigifax() + "','"
 				+ s.getFuelratio() + "','" + s.getAirvolume() + "','"
 				+ s.getSup_SiO2() + "','" + s.getReal_Matte() + "','"
@@ -296,6 +305,7 @@ public class SummaryDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -327,7 +337,11 @@ public class SummaryDAO {
 				+ s.getDosage7() + "',dosage8='" + s.getDosage8()
 				+ "',dosage9='" + s.getDosage9() + "',dosage10='"
 				+ s.getDosage10() + "',dosage11='" + s.getDosage11()
-				+ "',dosage12='" + s.getDosage12() + "',oxyconc='"
+				+ "',dosage12='" + s.getDosage12()
+				+ "',dosage13='" + s.getDosage13()
+				+ "',dosage14='" + s.getDosage14()
+				+ "',dosage15='" + s.getDosage15()
+				+ "',oxyconc='"
 				+ s.getOxyconc() + "',digifax='" + s.getDigifax()
 				+ "',fuelratio='" + s.getFuelratio() + "',airvolume='"
 				+ s.getAirvolume() + "',sup_SiO2='" + s.getSup_SiO2()
@@ -349,6 +363,7 @@ public class SummaryDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -378,6 +393,7 @@ public class SummaryDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -401,6 +417,7 @@ public class SummaryDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else

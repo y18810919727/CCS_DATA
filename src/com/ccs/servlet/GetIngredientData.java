@@ -75,11 +75,11 @@ public class GetIngredientData extends HttpServlet {
 		}
 		// 用反射方法完成
 		// 2017年2月14日增加11,12号仓
-		String[] stockname = { "NO1", "NO2", "NO3", "NO4", "NO8", "NO9", "NO10", "NO11", "NO12"};
-		int[] house = { 0, 1, 2, 3, 7, 8, 9, 10, 11 };
+		String[] stockname = { "NO1", "NO2", "NO3", "NO4", "NO8", "NO9", "NO10", "NO11", "NO12","NO13","NO14","NO15"};
+		int[] house = { 0, 1, 2, 3, 7, 8, 9, 10, 11 , 12, 13, 14};
 		if (ingredient != null) {
 			int i = 0;
-			// 封入9个仓的数据
+			// 封入15个仓的数据
 			for (String str : stockname) {
 				JSONObject jobj = new JSONObject();
 				String getname = "get" + str + "_name";
@@ -170,6 +170,10 @@ public class GetIngredientData extends HttpServlet {
 			jobj.put("Con_Al2O3", ingredient.getCon_Al2O3());
 			jobj.put("Con_Co", ingredient.getCon_Co());
 			jobj.put("Con_dosage", ingredient.getCon_dosage());
+			jary.add(jobj);
+			// 封装该配料单是否使用过
+			jobj = new JSONObject();
+			jobj.put("is_used",ingredient.isIs_used());
 			jary.add(jobj);
 		}
 		// System.out.println(jary.toString());

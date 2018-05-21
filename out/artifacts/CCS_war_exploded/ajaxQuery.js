@@ -90,6 +90,9 @@ function getMineral(number) {
 			var str = "";// 准备拼接表格
 			var i = 1;// 生成每一行的序号并记录行数
 			// 外层遍历：取出数组中的每一个对象
+
+			alert(length(date));
+            alert(data[length(date)-1]);
 			$.each(data, function(index, obj) {
 				str = str + "<tr id='mrow" + i + "'>";
 				// 内层遍历：取出对象中的所有值

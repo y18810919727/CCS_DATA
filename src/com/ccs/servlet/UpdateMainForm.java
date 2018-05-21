@@ -450,6 +450,60 @@ public class UpdateMainForm extends HttpServlet {
 		ingredient.setNO12_Al2O3(change_DecimalFormat(request
 				.getParameter("NO12_Al2O3")));
 		// ------分割线------
+		ingredient.setNO13_name(request.getParameter("NO13_name"));
+		ingredient.setNO13_Cu(change_DecimalFormat(request
+				.getParameter("NO13_Cu")));
+		ingredient.setNO13_Fe(change_DecimalFormat(request
+				.getParameter("NO13_Fe")));
+		ingredient.setNO13_S(change_DecimalFormat(request
+				.getParameter("NO13_S")));
+		ingredient.setNO13_Co(change_DecimalFormat(request
+				.getParameter("NO13_Co")));
+		ingredient.setNO13_SiO2(change_DecimalFormat(request
+				.getParameter("NO13_SiO2")));
+		ingredient.setNO13_CaO(change_DecimalFormat(request
+				.getParameter("NO13_CaO")));
+		ingredient.setNO13_MgO(change_DecimalFormat(request
+				.getParameter("NO13_MgO")));
+		ingredient.setNO13_Al2O3(change_DecimalFormat(request
+				.getParameter("NO13_Al2O3")));
+		// ------分割线------
+		ingredient.setNO14_name(request.getParameter("NO14_name"));
+		ingredient.setNO14_Cu(change_DecimalFormat(request
+				.getParameter("NO14_Cu")));
+		ingredient.setNO14_Fe(change_DecimalFormat(request
+				.getParameter("NO14_Fe")));
+		ingredient.setNO14_S(change_DecimalFormat(request
+				.getParameter("NO14_S")));
+		ingredient.setNO14_Co(change_DecimalFormat(request
+				.getParameter("NO14_Co")));
+		ingredient.setNO14_SiO2(change_DecimalFormat(request
+				.getParameter("NO14_SiO2")));
+		ingredient.setNO14_CaO(change_DecimalFormat(request
+				.getParameter("NO14_CaO")));
+		ingredient.setNO14_MgO(change_DecimalFormat(request
+				.getParameter("NO14_MgO")));
+		ingredient.setNO14_Al2O3(change_DecimalFormat(request
+				.getParameter("NO14_Al2O3")));
+		// ------分割线------
+		ingredient.setNO15_name(request.getParameter("NO15_name"));
+		ingredient.setNO15_Cu(change_DecimalFormat(request
+				.getParameter("NO15_Cu")));
+		ingredient.setNO15_Fe(change_DecimalFormat(request
+				.getParameter("NO15_Fe")));
+		ingredient.setNO15_S(change_DecimalFormat(request
+				.getParameter("NO15_S")));
+		ingredient.setNO15_Co(change_DecimalFormat(request
+				.getParameter("NO15_Co")));
+		ingredient.setNO15_SiO2(change_DecimalFormat(request
+				.getParameter("NO15_SiO2")));
+		ingredient.setNO15_CaO(change_DecimalFormat(request
+				.getParameter("NO15_CaO")));
+		ingredient.setNO15_MgO(change_DecimalFormat(request
+				.getParameter("NO15_MgO")));
+		ingredient.setNO15_Al2O3(change_DecimalFormat(request
+				.getParameter("NO15_Al2O3")));
+		// ------分割线------
 		ingredient.setCon_Cu(change_DecimalFormat(request
 				.getParameter("Con_Cu")));
 		ingredient.setCon_Fe(change_DecimalFormat(request
@@ -468,6 +522,9 @@ public class UpdateMainForm extends HttpServlet {
 				.getParameter("Con_Al2O3")));
 		ingredient.setCon_dosage(change_DecimalFormat(request
 				.getParameter("Con_dosage")));
+		System.out.println(request.getParameter("isUsedName"));
+		ingredient.setIs_used("1".equals(request.getParameter("isUsedName")));
+		System.out.println(ingredient.isIs_used());
 		// 防止指针问题修改原始数据！！！
 		// String curnumber = summary.getNumber();
 		// // 取得单号最后两位数字的整型形式并加1
@@ -532,6 +589,7 @@ public class UpdateMainForm extends HttpServlet {
 		DecimalFormat df = new DecimalFormat("#0.00");
 		return (df.format(Double.parseDouble(s)));
 	}
+
 
 	/**
 	 * Initialization of the servlet. <br>

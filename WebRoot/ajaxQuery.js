@@ -1,7 +1,7 @@
 // Powered By GaoYuxing
 // 2015-04-26
 var jsonStock;// 存储stock的json数据用
-var mrowcount = 10;// mineral表的行数
+var mrowcount = 13;// mineral表的行数
 var curdate;
 // 使用AJAX实现异步数据传输，后台访问servlet，通过JSON传递集合数据
 function getNum(calvalue) {
@@ -90,8 +90,16 @@ function getMineral(number) {
 			var str = "";// 准备拼接表格
 			var i = 1;// 生成每一行的序号并记录行数
 			// 外层遍历：取出数组中的每一个对象
+			console.log(data.length);
+            console.log(data);
+
 			$.each(data, function(index, obj) {
+                console.log(index);
+                if(index == data.length-1)
+                    return false;
 				str = str + "<tr id='mrow" + i + "'>";
+
+
 				// 内层遍历：取出对象中的所有值
 				$.each(obj, function(key, value) {
 					str = str + "<td>" + value + "</td>";
@@ -99,6 +107,11 @@ function getMineral(number) {
 				str = str + "</tr>";
 				i = i + 1;
 			});
+			is_used = data[data.length-1]["is_used"];
+			if(is_used)
+            	$("#isUsedID" ).val("是");
+			else
+                $("#isUsedID" ).val("否");
 			mrowcount = i - 1;
 			$("#mineral").append(str);
 		},

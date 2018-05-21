@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="date.css" />
 <script type="text/javascript" src="date_re.js"></script>
 <!-- 导入jQuery -->
-<script type="text/javascript" src="jquery-1.4.min.js"></script>
+<script type="text/javascript" src="jquery-1.4.min.js"></script> 
 <!-- 导入异步查询文件 -->
 <script type="text/javascript" src="ajaxQuery_2.js"></script>
 <script type="text/javascript">
@@ -64,6 +64,9 @@
 		var text31 = document.getElementById("text31").value;
 		var texth11 = document.getElementById("texth11").value;
 		var texth12 = document.getElementById("texth12").value;
+        var texth13 = document.getElementById("texth13").value;
+        var texth14 = document.getElementById("texth14").value;
+        var texth15 = document.getElementById("texth15").value;
 		var lastgrade = document.getElementById("textlastgrade").value;
 		var oxypur = document.getElementById("textoxypur").value;
 		var oxyconc = document.getElementById("textoxyconc").value;
@@ -78,7 +81,8 @@
 				|| text17 == "" || text18 == "" || text19 == "" || text20 == ""
 				|| text21 == "" || text22 == "" || text26 == "" || text27 == ""
 				|| text28 == "" || text29 == "" || text30 == "" || text31 == ""
-				|| texth11 == "" || texth12 == "" || oxypur == "" || oxyconc == "") {
+				|| texth11 == "" || texth12 == "" || texth13 == "" || texth14 == "" || texth15 == ""
+				|| oxypur == "" || oxyconc == "") {
 			alert("操作失败！" + '\n' + "请确认所有数据已填写！");
 			return false;
 		} else if(lastgrade == ""){
@@ -129,6 +133,9 @@
 		var text31 = document.getElementById("text_31").value;
 		var texth11 = document.getElementById("text_h11").value;
 		var texth12 = document.getElementById("text_h12").value;
+        var texth13 = document.getElementById("text_h13").value;
+        var texth14 = document.getElementById("text_h14").value;
+        var texth15 = document.getElementById("text_h15").value;
 		var textgrade = document.getElementById("text_grade").value;
 		var oxypur = document.getElementById("text_oxypur").value;
 		var oxyconc = document.getElementById("text_oxyconc").value;
@@ -144,7 +151,8 @@
 				|| text17 == "" || text18 == "" || text19 == "" || text20 == ""
 				|| text21 == "" || text22 == "" || text26 == "" || text27 == ""
 				|| text28 == "" || text29 == "" || text30 == "" || text31 == ""
-				|| texth11 == "" || texth12 == "" || textgrade == "" 
+				|| texth11 == "" || texth12 == "" || textgrade == ""
+            	|| texth13 == "" || texth14 == "" || texth15 == ""
 				|| oxypur == "" || oxyconc == "") {
 			alert("操作失败！" + '\n' + "请确认所有数据已填写");
 			return false;
@@ -277,9 +285,15 @@
 				<td>10#</td>
 				<td>11#</td>
 				<td>12#</td>
+				<td>13#</td>
+				<td>14#</td>
+				<td>15#</td>
 				<td>熔炼状况评分</td>
 			</tr>
 			<tr id="prow1">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -352,8 +366,14 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr id="prow3">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -426,8 +446,14 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr id="prow5">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -500,8 +526,14 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr id="prow7">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -574,8 +606,14 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr id="prow9">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -661,6 +699,9 @@
 							<td style="text-align: center;">10#</td>
 							<td style="text-align: center;">11#</td>
 							<td style="text-align: center;">12#</td>
+							<td style="text-align: center;">13#</td>
+							<td style="text-align: center;">14#</td>
+							<td style="text-align: center;">15#</td>
 							<td style="text-align: center;">熔炼状况评分</td>
 						</tr>
 						<tr>
@@ -816,6 +857,18 @@
 								type="text" style="width:90px" name="h12used"
 								onblur="checkNum('text_h12')" />
 							</td>
+							<td style="text-align: center;"><input id="text_h13"
+																   type="text" style="width:90px" name="h13used"
+																   onblur="checkNum('text_h13')" />
+							</td>
+							<td style="text-align: center;"><input id="text_h14"
+																   type="text" style="width:90px" name="h14used"
+																   onblur="checkNum('text_h14')" />
+							</td>
+							<td style="text-align: center;"><input id="text_h15"
+																   type="text" style="width:90px" name="h15used"
+																   onblur="checkNum('text_h15')" />
+							</td>
 							<td style="text-align: center;"><input id="text_grade"
 								type="text" style="width:90px" name="grade"
 								onblur="checkNum('text_grade')" />
@@ -876,6 +929,9 @@
 							<td style="text-align: center;">10#</td>
 							<td style="text-align: center;">11#</td>
 							<td style="text-align: center;">12#</td>
+							<td style="text-align: center;">13#</td>
+							<td style="text-align: center;">14#</td>
+							<td style="text-align: center;">15#</td>
 							<td style="text-align: center;">
 							<font color = "#FF0000"><b>上次</b></font>熔炼状况评分
 							</td>
@@ -1032,6 +1088,18 @@
 							<td style="text-align: center;"><input id="texth12"
 								type="text" style="width:90px" name="h12used"
 								onblur="checkNum('texth12')" />
+							</td>
+							<td style="text-align: center;"><input id="texth13" 
+								type="text" style="width:90px" name="h13used"
+								onblur="checkNum('texth13')" />
+							</td>
+							<td style="text-align: center;"><input id="texth14"
+																   type="text" style="width:90px" name="h14used"
+																   onblur="checkNum('texth14')" />
+							</td>
+							<td style="text-align: center;"><input id="texth15"
+																   type="text" style="width:90px" name="h15used"
+																   onblur="checkNum('texth15')" />
 							</td>
 							<td style="text-align: center;"><input id="textlastgrade"
 								type="text" style="width:90px" name="lastgrade"

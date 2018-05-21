@@ -78,6 +78,7 @@ public class StockDAO {
 			s.setCur_CCS(rs.getString(41));
 			list.add(s);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -142,6 +143,7 @@ public class StockDAO {
 			s.setCur_CCS(rs.getString(41));
 			list.add(s);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -205,6 +207,7 @@ public class StockDAO {
 			s.setCur_BOLO(rs.getString(40));
 			s.setCur_CCS(rs.getString(41));
 		}
+		DBUtil.closeConnection();
 		return s;
 	}
 
@@ -227,6 +230,7 @@ public class StockDAO {
 		if (rs.next()) {
 			count = rs.getInt(1);
 		}
+		DBUtil.closeConnection();
 		return count;
 	}
 
@@ -274,6 +278,7 @@ public class StockDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -323,6 +328,7 @@ public class StockDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -346,6 +352,7 @@ public class StockDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else

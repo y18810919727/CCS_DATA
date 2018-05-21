@@ -44,6 +44,7 @@ public class WarehouseDAO {
 			w.setHouse10(rs.getString(11));
 			list.add(w);
 		}
+		DBUtil.closeConnection();
 		return list;
 	}
 
@@ -70,6 +71,7 @@ public class WarehouseDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -99,6 +101,7 @@ public class WarehouseDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
@@ -122,6 +125,7 @@ public class WarehouseDAO {
 		Connection con = DBUtil.getConnection();
 		PreparedStatement pst = con.prepareStatement(sql);
 		int result = pst.executeUpdate();
+		DBUtil.closeConnection();
 		if (result > 0)
 			return true;
 		else
